@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>frandpow</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header>
+            <div id="logo" onclick="slownScroll('#top')">
+                <span>Jackeroot</span>
+            </div>
+            <div id="about">
+                <a href="#" title="Возможности" onclick="slownScroll('#main')">ШтО уМеЮ</a>
+                <a href="#" title="Кто я" onclick="slownScroll('#overview')">Кто я</a>
+                <a href="#" title="Ссылки" onclick="slownScroll('#contacts')">Обратная связь</a>
+            </div>
+        </header>
+        <div id="top">
+            <h1>Спортсменка, комсомолка и просто красавица. Знакомьтесь - Серёжа Лукьянчикова!</h1>
+            <h3>И иногда выпиваем.</h3>
+        </div>
+        <div id="main">
+            <div class="intro">
+                <h2>Чем я могу вам помочь:</h2>
+                <span>Не только поиграть и погулять, но возможно и потусить ночь!</span>
+            </div>
+            <div class="text">
+                <span>Не следует, однако, забывать, что убеждённость некоторых оппонентов предопределяет высокую востребованность дальнейших направлений развития! Безусловно, консультация с широким активом требует определения и уточнения первоочередных требований.</span>
+            </div>
+        </div>
+        <div id="overview">
+            <h2>Кем я являюсь:</h2>
+            <h4>Студент, человек и дотер</h4>
+            <div class="img">
+      <img src="https://sun9-59.userapi.com/impg/W9XL7Q3mzpOQvBc__AwzU1gp607yWWVe1eS3qA/-AaqeAzTQ2s.jpg?size=491x423&quality=96&sign=828a32fe27dfe9dc64c3f32e4d6fd375&type=album" alt="">
+      <span>Как все начинается</span>
+    </div>
+    <div class="img">
+      <img src="https://sun9-56.userapi.com/impg/r7fhw9rmiIEsQTqDX-Tr68aXFVtENG3UgMP8yw/_wW2TC4w0jY.jpg?size=690x707&quality=96&sign=7408cb51da30db0164f6d08d03af9d14&type=album" alt=""width="491" height="423">
+      <span>Как все заканчивается</span>
+    </div>
+  </div>
+        </div>
+        <div id="contacts">
+            <center><h5>Обратная связь</h5></center>
+            <form id="form_input">
+                <label for="name">Имя <span>*</span></label><br>
+                <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+                <label for="email">E-mail<span>*</span></label><br>
+			    <input type="email" placeholder="Введите email" name="email" id="email"><br>
+			    <label for="message">Сообщение <span>*</span></label><br>
+			    <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			    <div id="mess_send" class="btn">Отправить</div>
+            </form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            function slownScroll(id) {
+                $('html,body').animate( {
+                    scrollTop: $(id).offset().top
+                },500);
+            }
+            $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+        </script>
+    </body>
+</html>
